@@ -1,0 +1,26 @@
+.site-footer {
+    padding: 0 15vw;
+    background-color: $color-black;
+    text-align: center;
+    &__listwrapper {
+    
+    display: flex;
+    justify-content: space-around;
+    
+
+    .listbox {
+        padding: 2rem;
+        &__title {
+            color: $color-yellow;
+        }
+
+        &__link {
+            text-decoration: none;
+            color: $color-gray;
+        }
+    }
+    }
+    &__copyright {
+        color: $color-gray;
+    }
+}

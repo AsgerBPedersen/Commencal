@@ -1,0 +1,18 @@
+.hero-section {
+    height: 45vh;
+    background-image: url(../../img/slider/1.jpg);
+    background-position: center;
+}
+
+.display-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 15vw;
+}
+
+.social-section {
+    display: flex;
+    justify-content: center;
+    background-color: $color-lightgray;
+    padding: 0 15vw;
+}
