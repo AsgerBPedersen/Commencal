@@ -2,17 +2,52 @@
     height: 45vh;
     background-image: url(../../img/slider/1.jpg);
     background-position: center;
+    background-size: cover;
 }
 
 .display-section {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 0 15vw;
+    grid-template-columns: repeat(4, minmax(20rem, 1fr));
+    margin: 5rem 15vw;
 }
 
 .social-section {
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: $color-lightgray;
-    padding: 0 15vw;
+    padding: 2rem 15vw;
+
+    .clip-wrapper {
+        flex: 1 1 0;
+        text-align: right;
+        
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .news-list {
+        flex: 1 1 0;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .social-section {
+        flex-direction: column;
+        .clip-wrapper {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .display-section {
+        grid-template-columns: repeat(2, minmax(20rem, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .display-section {
+        grid-template-columns: repeat(1, minmax(20rem, 1fr));
+    }
 }
