@@ -13,6 +13,10 @@
         &__title {
             color: $color-yellow;
         }
+        &__wrapper {
+            display: inline-block;
+            overflow: hidden;
+        }
 
         &__link {
             text-decoration: none;
@@ -48,5 +52,13 @@
     }
     &__copyright {
         color: $color-gray;
+    }
+}
+
+@media (max-width: 500px) {
+    .site-footer {
+        &__listwrapper {
+        flex-direction: column;
+        }
     }
 }
