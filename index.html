@@ -29,7 +29,11 @@
         </nav>
     </header>
     <main class="main-wrapper">
-        <section class="hero-section"></section>
+        <section class="hero-section">
+            <div class="slides"><img src="./img/slider/1.jpg" alt=""></div>
+            <div class="slides"><img src="./img/slider/2.jpg" alt=""></div>
+            <div class="slides"><img src="./img/slider/3.jpg" alt=""></div>
+        </section>
         <section class="display-section">
             <div class="bike-display">
                 <img src="./img/Kids.jpg" alt="" class="bike-display__image">
@@ -66,7 +70,8 @@
         </section>
         <section class="social-section">
             <div class="clip-wrapper">
-                <img src="./img/video-placeholder.png" alt="">
+                <iframe src="https://player.vimeo.com/video/179161043" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
             </div>
             <div class="news-list">
                 <article class="news-article">
@@ -89,29 +94,45 @@
                 <div class="listbox">
                         <h4 class="listbox__heading--yellow">follow us</h4>
                         <ul class="listbox__list">
-                            <li class="listbox__item"><a href="#" class="listbox__link">YouTube</a></li>
-                            <li class="listbox__item"><a href="#" class="listbox__link">Instagram</a></li>
-                            <li class="listbox__item"><a href="#" class="listbox__link">Facebook</a></li>
+                            <li class="listbox__item"><div class="listbox__wrapper"><a href="#" class="listbox__link">YouTube</a></div></li>
+                            <li class="listbox__item"><div class="listbox__wrapper"><a href="#" class="listbox__link">Instagram</a></div></li>
+                            <li class="listbox__item"><div class="listbox__wrapper"><a href="#" class="listbox__link">Facebook</a></div></li>
                         </ul>
                     </div>
                     <div class="listbox">
                         <h4 class="listbox__heading--yellow">information</h4>
                         <ul class="listbox__list">
-                            <li class="listbox__item"><a href="#" class="listbox__link">Tutorials</a></li>
-                            <li class="listbox__item"><a href="#" class="listbox__link">Technical Manuals</a></li>
-                            <li class="listbox__item"><a href="#" class="listbox__link">Legal</a></li>
-                            <li class="listbox__item"><a href="#" class="listbox__link">Warranty</a></li>
+                            <li class="listbox__item"><div class="listbox__wrapper"><a href="#" class="listbox__link">Tutorials</a></div></li>
+                            <li class="listbox__item"><div class="listbox__wrapper"><a href="#" class="listbox__link">Technical Manuals</a></div></li>
+                            <li class="listbox__item"><div class="listbox__wrapper"><a href="#" class="listbox__link">Legal</a></div></li>
+                            <li class="listbox__item"><div class="listbox__wrapper"><a href="#" class="listbox__link">Warranty</a></div></li>
                         </ul>
                     </div>
                     <div class="listbox">
                         <h4 class="listbox__heading--yellow">Commercial</h4>
                         <ul class="listbox__list">
-                            <li class="listbox__item"><a href="#" class="listbox__link">Employee Discounts</a></li>
-                            <li class="listbox__item"><a href="#" class="listbox__link">Distributors</a></li>
+                            <li class="listbox__item"><div class="listbox__wrapper"><a href="#" class="listbox__link">Employee Discounts</a></div></li>
+                            <li class="listbox__item"><div class="listbox__wrapper"><a href="#" class="listbox__link">Distributors</a></div></li>
                         </ul>
                     </div>
         </div>
         <h3 class="site-footer__copyright">Copyright 2019 - COMMENCAL</h3>
     </footer>
 </body>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  
+  var slides = document.getElementsByClassName("slides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none"; 
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1} 
+  slides[slideIndex-1].style.display = "block"; 
+  setTimeout(showSlides, 5000); 
+}
+</script>
 </html>
