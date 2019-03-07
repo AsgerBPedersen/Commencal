@@ -15,7 +15,7 @@
         }
         &__wrapper {
             display: inline-block;
-            overflow: hidden;
+            
         }
 
         &__link {
@@ -25,6 +25,7 @@
             &::after {
                 content: "";
                 display: block;
+                visibility: hidden;
                 height: .1rem;
                 opacity: 0;
                 background-color: $color-yellow;
@@ -36,6 +37,7 @@
             &:hover,
             &:focus {
                 &::after {
+                    visibility: visible;
                     opacity: 1;
                     transform: translateY(0);
                 }
