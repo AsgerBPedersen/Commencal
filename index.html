@@ -8,6 +8,7 @@
     <meta name="keywords" content="bikes, hardtail, full suspension, downhill, enduro, citybikes, streetbikes">
     <meta name="description" content="The best bikeshop on the internet!">
 
+    <script src="https://unpkg.com/scrollreveal@4"></script>
 
     <title>Commencal Bikes</title>
 
@@ -148,6 +149,11 @@
         <h3 class="site-footer__copyright">Copyright 2019 - COMMENCAL</h3>
     </footer>
     <script>
+        ScrollReveal().reveal('.social-section', { delay: 500, distance: '200px', rotate: {
+        x: 20,
+        z: 20
+    }, reset: true });
+        //slideshow
         var slideIndex = 0;
         showSlides();
 
